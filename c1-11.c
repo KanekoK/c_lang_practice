@@ -10,16 +10,16 @@
 
 int main()
 {
-    int wordcounter, newstatus;
+    int wordcounter, nowstatus;
     int c;
 
-    newstatus = OUT;
+    nowstatus = OUT;
     wordcounter = 0;
     while ((c = getchar()) != EOF) {
         if (c == '\t' || c == ' ' || c == '\n') {
-            newstatus = OUT;
-        } else if (newstatus == OUT) {
-            newstatus = IN;
+            nowstatus = OUT;
+        } else if (nowstatus == OUT) {
+            nowstatus = IN;
             ++wordcounter;
         }
     }
